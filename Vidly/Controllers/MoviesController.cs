@@ -11,7 +11,7 @@ namespace Vidly.Controllers
     public class MoviesController : Controller
     {
         // GET: Movies
-        public ActionResult Index()
+        public ViewResult Index()
         {
             var movies = getMovies();
 
@@ -28,7 +28,7 @@ namespace Vidly.Controllers
             return View(movie);
         }
 
-        public IEnumerable<Movie> getMovies()
+        private IEnumerable<Movie> getMovies()
         {
             return new List<Movie>
             {

@@ -19,7 +19,8 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Movie</th>
+                        <th>Customer</th>
+                        <th>Membership Type</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,6 +29,7 @@
                         <tr>
                             <td>@customer.Id</td>
                             <td>@Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)</td>
+                            <td>@customer.MembershipType.Name</td>
                         </tr>
                     }
                 </tbody>
