@@ -9,6 +9,11 @@
 
 <div class="row">
     <div class="col-md-12">
+
+        @Html.ActionLink("New movie", "New", "Movies", null, new { @class = "btn btn-warning" })
+        <br />
+        <br />
+
         @if (!Model.Any())
         {
             <p>We don't have any movie yet.</p>
@@ -28,7 +33,7 @@
                     {
                         <tr>
                             <td>@movie.Id</td>
-                            <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
+                            <td>@Html.ActionLink(movie.Name, "Edit", "Movies", new { id = movie.Id }, null)</td>
                             <td>@movie.Genre.Name</td>
                         </tr>
                     }
